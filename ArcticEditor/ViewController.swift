@@ -9,11 +9,14 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+    @IBOutlet weak var editor: ArcticEditor!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        editor.text = "hello"
     }
 
     override var representedObject: Any? {

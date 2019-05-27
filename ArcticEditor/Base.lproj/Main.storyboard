@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="ArcticEditor" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -703,11 +704,34 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="ArcticEditor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="LF8-UR-JTL">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="srI-zh-3Zr"/>
+                                </constraints>
+                            </customView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="CJX-DV-K0J" customClass="ArcticEditor" customModule="ArcticEditor" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="480" height="250"/>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CJX-DV-K0J" secondAttribute="trailing" id="2Ja-XU-Byj"/>
+                            <constraint firstAttribute="trailing" secondItem="LF8-UR-JTL" secondAttribute="trailing" id="46L-VZ-xFW"/>
+                            <constraint firstItem="CJX-DV-K0J" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="GXp-zd-De7"/>
+                            <constraint firstItem="LF8-UR-JTL" firstAttribute="top" secondItem="CJX-DV-K0J" secondAttribute="bottom" id="Qwv-3h-BBS"/>
+                            <constraint firstItem="LF8-UR-JTL" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="nmU-Aw-Gjl"/>
+                            <constraint firstAttribute="bottom" secondItem="LF8-UR-JTL" secondAttribute="bottom" id="rf6-5s-g6k"/>
+                            <constraint firstItem="CJX-DV-K0J" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="wSQ-St-1sb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="editor" destination="CJX-DV-K0J" id="jjR-yR-0Pf"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

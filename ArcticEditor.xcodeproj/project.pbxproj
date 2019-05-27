@@ -11,6 +11,7 @@
 		67870DA1229BD40F00D7C638 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67870DA0229BD40F00D7C638 /* ViewController.swift */; };
 		67870DA3229BD41000D7C638 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67870DA2229BD41000D7C638 /* Assets.xcassets */; };
 		67870DA6229BD41000D7C638 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67870DA4229BD41000D7C638 /* Main.storyboard */; };
+		67870DB0229BD53000D7C638 /* ArcticEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67870DAF229BD53000D7C638 /* ArcticEditor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		67870DA5229BD41000D7C638 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		67870DA7229BD41000D7C638 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67870DA8229BD41000D7C638 /* ArcticEditor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ArcticEditor.entitlements; sourceTree = "<group>"; };
+		67870DAF229BD53000D7C638 /* ArcticEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcticEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,12 +55,29 @@
 		67870D9D229BD40F00D7C638 /* ArcticEditor */ = {
 			isa = PBXGroup;
 			children = (
-				67870D9E229BD40F00D7C638 /* AppDelegate.swift */,
+				67870DB1229BD53500D7C638 /* ArcticEditor */,
 				67870DA0229BD40F00D7C638 /* ViewController.swift */,
+				67870DAE229BD51700D7C638 /* Support */,
+			);
+			path = ArcticEditor;
+			sourceTree = "<group>";
+		};
+		67870DAE229BD51700D7C638 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				67870D9E229BD40F00D7C638 /* AppDelegate.swift */,
 				67870DA2229BD41000D7C638 /* Assets.xcassets */,
 				67870DA4229BD41000D7C638 /* Main.storyboard */,
 				67870DA7229BD41000D7C638 /* Info.plist */,
 				67870DA8229BD41000D7C638 /* ArcticEditor.entitlements */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		67870DB1229BD53500D7C638 /* ArcticEditor */ = {
+			isa = PBXGroup;
+			children = (
+				67870DAF229BD53000D7C638 /* ArcticEditor.swift */,
 			);
 			path = ArcticEditor;
 			sourceTree = "<group>";
@@ -133,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67870DB0229BD53000D7C638 /* ArcticEditor.swift in Sources */,
 				67870DA1229BD40F00D7C638 /* ViewController.swift in Sources */,
 				67870D9F229BD40F00D7C638 /* AppDelegate.swift in Sources */,
 			);
