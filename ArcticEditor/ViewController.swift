@@ -16,7 +16,7 @@ class ViewController: NSViewController {
 
         // Do any additional setup after loading the view.
         
-        editor.text = "hello"
+        editor.text = "hello\na"
     }
 
     override var representedObject: Any? {
